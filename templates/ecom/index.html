@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  background-color:#8c9eff;
+  background-color:#ced0dc;
 }
 
 .page-wrapper {
@@ -48,7 +48,7 @@ body {
   width: 360px;
   padding: 15px;
   margin: 15px auto;
-  background-color: #fff;
+  background-color: #e6bcbc;
 }
 
 @media (max-width: 991px) {
@@ -144,7 +144,7 @@ body {
   /* ease-out */
   width: 660px;
   height: 100%;
-  background-color: #3f96cd;
+  background-color: #c3d2dc;
   position: absolute;
   left: -659px;
 }
@@ -283,23 +283,19 @@ body {
 * {
   box-sizing: border-box;
 }
-
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -310,7 +306,7 @@ body {
 {%if products%}
 <h3 style="text-align:center; color:yellow;">{{word}}</h3>
 <br>
-<!-- products data starttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
+
   <div class="row">
 
       {% for p in products %}
@@ -321,7 +317,7 @@ body {
           <div class="row">
             <div class="el-wrapper">
               <div class="box-up">
-                <img class="img" src="{% static p.product_image.url %}" alt="product pic" height="300px" width="300px">
+                {% comment %} <img class="img" src="{% static p.product_image.url %}" alt="product pic" height="300px" width="300px"> {% endcomment %}
                 <div class="img-info">
                   <div class="info-inner">
                     <span style="background-color:#08050a; color:yellow;"class="p-company">{{p.name}}</span>
@@ -358,7 +354,7 @@ body {
 {% endif %}
   {% endfor %}
 </div>
-<!-- products data enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
+
 {%else%}
 <h3 style="text-align:center; color:yellow;">No Search Found</h3>
 {%endif%}
@@ -374,10 +370,5 @@ body {
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
 
 {% endblock content %}
